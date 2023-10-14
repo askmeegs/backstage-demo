@@ -1,0 +1,24 @@
+# This Cloud Build pipeline builds + deploys the Backstage instance (backstage/) to the GKE admin cluster. 
+steps:
+# Build Backstage container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA", "backstage/"]
+# Push Backstage container image 
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA"]
+# Set backstage image in Kubernetes deployment manifest using sed 
+- name: "gcr.io/cloud-builders/gcloud"
+  entrypoint: "bash"
+  args:
+  - "-c"
+  - |
+    sed -i 's|gcr.io/mokeefe-test-6/backstage:latest|gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA|g' kubernetes/backstage-deployment.yaml
+# Deploy Backstage to GKE
+- name: "gcr.io/cloud-builders/kubectl"
+  args:
+  - "apply"
+  - "-f"
+  - "kubernetes/backstage-deployment.yaml"
+  env:
+  - "CLOUDSDK_COMPUTE_ZONE=us-central1-a"
+  - "CLOUDSDK_CONTAINER_CLUSTER=backstage"
