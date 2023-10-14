@@ -2,7 +2,7 @@
 steps:
 # Build Backstage container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA", "backstage/"]
+  args: ["build", "-t", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA", "backstage/packages/backend"]
 # Push Backstage container image 
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA"]
