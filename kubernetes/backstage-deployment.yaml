@@ -25,5 +25,5 @@ spec:
           envFrom:
             - secretRef:
                 name: postgres-secrets
-            - secretRef:
-                name: gcp-oauth-secret
+            # - secretRef:
+            #     name: gcp-oauth-secret

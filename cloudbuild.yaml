@@ -1,8 +1,22 @@
 # This Cloud Build pipeline builds + deploys the Backstage instance (backstage/) to the GKE admin cluster. 
 steps:
+# Build the backstage app with yarn https://backstage.io/docs/deployment/docker/#host-build 
+- name: "gcr.io/cloud-builders/yarn"
+  args:
+    - install
+# yarn tsc
+- name: "gcr.io/cloud-builders/yarn"
+  args:
+    - tsc
+# yarn build !Cidr 
+- name: "gcr.io/cloud-builders/yarn"
+  args:
+    - build:backend
+    - --config
+    - ../../app-config.yaml
 # Build Backstage container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA", "backstage/packages/backend"]
+  args: ["DOCKER_BUILDKIT=1", build", "-t", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA", "backstage/packages/backend"]
 # Push Backstage container image 
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/mokeefe-test-6/backstage:$COMMIT_SHA"]
