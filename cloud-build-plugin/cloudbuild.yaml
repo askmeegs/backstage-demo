@@ -8,6 +8,6 @@ steps:
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'cr-go-service', '--image', 'gcr.io/mokeefe-test-6/cr-go-service', '--region', 'us-central1']
+  args: ['run', 'deploy', 'cr-go-service', '--image', 'gcr.io/mokeefe-test-6/cr-go-service', '--region', 'us-central1' , '--allow-unauthenticated']
 images:
 - gcr.io/mokeefe-test-6/cr-go-service
