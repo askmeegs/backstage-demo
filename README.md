@@ -1,7 +1,5 @@
 # backstage-demo
-Getting Started with Backstage on GKE 
-
-
+Demo for KubeCon lighting talk - Getting Started with Backstage on GKE 
 
 ### running backstage locally (outside k8s)
 
@@ -10,10 +8,11 @@ cd backstage
 yarn-dev
 ```
 
-### MUST DO 
-- [ ] Debug ingress / connection reset when listening on 7007 
-- [ ] Create GCP OAuth secret
+### TODO
+- [x] (Just port forwarding locally for now) Debug ingress / connection reset when listening on 7007
+- [ ] Github auth 
 - [ ] Software catalog entries for online boutique 
+- [ ] Create GCP OAuth secret
 - [ ] OAuth - Admin GKE --> App GKE 
 - [ ] Get GKE pods to show up alongside software catalog entries 
 - [ ] Cloud Build plugin
