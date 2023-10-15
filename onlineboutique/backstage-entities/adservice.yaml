@@ -12,9 +12,7 @@ metadata:
       title: Online Boutique - Upstream repo
       icon: help
   annotations:
-    'backstage.io/kubernetes-id': adservice
-    'google.com/cloudbuild-project-slug': cpet-backstage
-    'backstage.io/techdocs-ref': dir:..
+    backstage.io/kubernetes-label-selector: 'adservice'
 spec:
   type: service
   lifecycle: experimental

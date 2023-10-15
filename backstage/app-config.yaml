@@ -28,7 +28,7 @@ backend:
     client: better-sqlite3
     connection: ':memory:'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
-# https://backstage.io/docs/integrations/github/locations 
+# https://backstage.io/docs/integrations/github/locations
 integrations:
   github:
     - host: github.com
@@ -78,7 +78,7 @@ catalog:
       target: ../../examples/template/template.yaml
       rules:
         - allow: [Template]
- 
+
     # Local example organizational data
     - type: file
       target: ../../examples/org.yaml
@@ -89,8 +89,6 @@ catalog:
       target: https://github.com/backstage/software-templates/blob/main/scaffolder-templates/react-ssr-template/template.yaml
       rules:
         - allow: [Template]
-
-
 auth:
   environment: production
   providers:
@@ -98,15 +96,14 @@ auth:
       production:
         clientId: ${AUTH_GOOGLE_CLIENT_ID}
         clientSecret: ${AUTH_GOOGLE_CLIENT_SECRET}
-
 # https://backstage.io/docs/features/kubernetes/configuration/#gke
 kubernetes:
   serviceLocatorMethod:
     type: 'multiTenant'
   clusterLocatorMethods:
-    - type: 'gke'
-      projectId: 'mokeefe-test-6'
-      region: 'us-central1'
-      skipTLSVerify: true
-      skipMetricsLookup: true
-      exposeDashboard: true
+    - type: 'config'
+      clusters:
+        - url: https://104.155.131.105
+          name: onlineboutique
+          skipTLSVerify: true
+          authProvider: 'google'
