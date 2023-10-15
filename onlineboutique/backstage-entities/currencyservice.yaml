@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: currencyservice
+  description: currencyservice
+  tags:
+    - node
+    - backend
+    - grpc
+  links:
+    - url: https://github.com/googlecloudplatform/microservices-demo
+      title: Online Boutique - Upstream repo
+      icon: help
+  annotations:
+    'backstage.io/kubernetes-id': currencyservice
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+  system: online-boutique
+  dependsOn: ['component:checkoutservice', 'component:frontend']
+  # apiConsumedBy:
+  # - 'component:cartservice'
+  # - 'component:shippingservice'
+  # - 'component:cartservice'
+  # - 'component:paymentservice'
+  # - 'component:emailservice'

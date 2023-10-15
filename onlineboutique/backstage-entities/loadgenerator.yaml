@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: loadgenerator
+  description: loadgenerator
+  tags:
+    - python
+    - loadgen
+  links:
+    - url: https://github.com/googlecloudplatform/microservices-demo
+      title: Online Boutique - Upstream repo
+      icon: help
+  annotations:
+    'backstage.io/kubernetes-id': loadgenerator
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+  system: online-boutique
+  # dependsOn: ['component:frontend']
+  apiConsumedBy:
+  - 'component:frontend'

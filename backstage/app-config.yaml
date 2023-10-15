@@ -3,7 +3,7 @@ app:
   baseUrl: http://localhost:3000
 
 organization:
-  name: Google Cloud DevRel
+  name: Google Cloud @ KubeCon
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -12,7 +12,7 @@ backend:
   # auth:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
-  baseUrl: http://localhost:7007
+  baseUrl: http://localhost:3000
   listen:
     port: 7007
     # Uncomment the following host directive to bind to specific interfaces

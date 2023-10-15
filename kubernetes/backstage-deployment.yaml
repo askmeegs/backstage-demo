@@ -16,12 +16,11 @@ spec:
     spec:
       containers:
         - name: backstage
-        # Cloud Build should replcae latest with COMMIT_SHA 
           image: gcr.io/mokeefe-test-6/backstage:latest
           imagePullPolicy: Always
           ports:
             - name: http
-              containerPort: 7007
+              containerPort: 3000
           envFrom:
             - secretRef:
                 name: postgres-secrets

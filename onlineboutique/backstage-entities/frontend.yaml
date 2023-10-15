@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: frontend
+  description: Frontend for Online Boutique
+  tags:
+    - golang
+    - frontend 
+    - http
+  links:
+    - url: https://github.com/googlecloudplatform/microservices-demo
+      title: Online Boutique - Upstream repo
+      icon: help
+  annotations:
+    'backstage.io/kubernetes-id': frontend
+spec:
+  type: service
+  lifecycle: experimental
+  owner: cpet
+  system: online-boutique
+  dependsOn:
+  - 'component:adservice'
+  # - .... more backends here 
+  # apiConsumedBy: ['component:frontend']

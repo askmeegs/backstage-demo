@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cartservice
+  description: cart service
+  tags:
+    - dotnet
+    - backend
+    - grpc
+  links:
+    - url: https://github.com/googlecloudplatform/microservices-demo
+      title: Online Boutique - Upstream repo
+      icon: help
+  annotations:
+    'backstage.io/kubernetes-id': cartservice
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+  system: online-boutique
+  dependsOn: ['component:frontend', 'component:checkoutservice']
+  apiConsumedBy: ['component:rediscart']

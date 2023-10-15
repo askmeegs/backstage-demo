@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: emailservice
+  description: emailservice
+  tags:
+    - python
+    - backend
+    - grpc
+  links:
+    - url: https://github.com/googlecloudplatform/microservices-demo
+      title: Online Boutique - Upstream repo
+      icon: help
+  annotations:
+    'backstage.io/kubernetes-id': emailservice
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+  system: online-boutique
+  dependsOn: ['component:checkoutservice']
+  # apiConsumedBy:
+  # - 'component:cartservice'
+  # - 'component:shippingservice'
+  # - 'component:cartservice'
+  # - 'component:paymentservice'
+  # - 'component:emailservice'
