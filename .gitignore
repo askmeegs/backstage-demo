@@ -35,3 +35,5 @@ terraform.rc
 
 # Do not commit secrets
 kubernetes/backstage-secret.yaml
+kubernetes/google-oauth-secret.yaml 
+kubernetes/github-secret.yaml
