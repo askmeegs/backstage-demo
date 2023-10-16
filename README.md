@@ -10,10 +10,10 @@ yarn-dev
 
 ### TODO
 - [x] (Just port forwarding locally for now) Debug ingress / connection reset when listening on 7007
-- [ ] Github auth 
-- [ ] Software catalog entries for online boutique 
-- [ ] Create GCP OAuth secret
-- [ ] OAuth - Admin GKE --> App GKE 
+- [x] Github auth 
+- [x] Software catalog entries for online boutique 
+- [x] Create GCP OAuth secret
+- [x] OAuth - Admin GKE --> App GKE 
 - [ ] Get GKE pods to show up alongside software catalog entries 
 - [ ] Cloud Build plugin
 

@@ -103,7 +103,7 @@ kubernetes:
   clusterLocatorMethods:
     - type: 'config'
       clusters:
-        - url: https://104.155.131.105
+        - url: https://34.42.204.180
           name: onlineboutique
           skipTLSVerify: true
           authProvider: 'google'

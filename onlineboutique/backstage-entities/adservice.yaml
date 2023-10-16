@@ -12,7 +12,7 @@ metadata:
       title: Online Boutique - Upstream repo
       icon: help
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app=adservice'
+    'backstage.io/kubernetes-id': adservice
 spec:
   type: service
   lifecycle: experimental
