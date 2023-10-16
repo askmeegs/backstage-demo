@@ -13,7 +13,7 @@ metadata:
       icon: help
   annotations:
     'backstage.io/kubernetes-id': adservice
-    'google.com/cloudbuild-project-slug': mokeefe-test-6
+    'google.com/cloudbuild-project-slug': mokeefe-test-6/us-central1
 
 spec:
   type: service
