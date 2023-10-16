@@ -14,7 +14,7 @@ yarn-dev
 - [x] Software catalog entries for online boutique 
 - [x] Create GCP OAuth secret
 - [x] OAuth - Admin GKE --> App GKE 
-- [ ] Get GKE pods to show up alongside software catalog entries 
+- [x] Get GKE pods to show up alongside software catalog entries 
 - [ ] Cloud Build plugin
 
 ### TIME PERMITTING 

@@ -2845,6 +2845,24 @@
     react-use "^17.2.4"
     zen-observable "^0.10.0"
 
+"@backstage/plugin-cloudbuild@^0.3.24":
+  version "0.3.24"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-cloudbuild/-/plugin-cloudbuild-0.3.24.tgz#fe826ea15da282058f726eeb64b7f3ce077a297b"
+  integrity sha512-nQIiZDnvNIPy6gjCpiVQ/C1tJf3eFPVEWZlg0tgzb1ONjRnLZCo9qSSv1695olZ7iv34nDAIjUOj0DokAghnog==
+  dependencies:
+    "@backstage/catalog-model" "^1.4.2"
+    "@backstage/core-components" "^0.13.5"
+    "@backstage/core-plugin-api" "^1.6.0"
+    "@backstage/plugin-catalog-react" "^1.8.4"
+    "@backstage/theme" "^0.4.2"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.9.1"
+    "@material-ui/lab" "4.0.0-alpha.61"
+    "@types/react" "^16.13.1 || ^17.0.0"
+    luxon "^3.0.0"
+    qs "^6.9.4"
+    react-use "^17.2.4"
+
 "@backstage/plugin-events-node@^0.2.14":
   version "0.2.14"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-events-node/-/plugin-events-node-0.2.14.tgz#dd323ca46e0d16f393484cfa4160223cbd66de8a"
@@ -8202,7 +8220,7 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.5.tgz#38bd1733ae299620771bd414837ade2e57757498"
   integrity sha512-xrO9OoVPqFuYyR/loIHjnbvvyRZREYKLjxV4+dY6v3FQR3stQ9ZxIGkaclF7YhI9hfjpuTbu14hZEy94qKLtOA==
 
-"@types/react-dom@*", "@types/react-dom@<18.0.0":
+"@types/react-dom@*", "@types/react-dom@<18.0.0", "@types/react-dom@^17":
   version "17.0.21"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.21.tgz#85d56965483ce4850f5f03f9234e54a1f47786e5"
   integrity sha512-3rQEFUNUUz2MYiRwJJj6UekcW7rFLOtmK7ajQP7qJpjNdggInl3I/xM4I3Hq1yYPdCGVMgax1gZsB7BBTtayXg==

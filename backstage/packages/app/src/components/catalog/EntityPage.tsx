@@ -58,7 +58,7 @@ import {
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
-
+import { EntityCloudbuildContent, isCloudbuildAvailable } from '@backstage/plugin-cloudbuild';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -75,7 +75,9 @@ const cicdContent = (
     <EntitySwitch.Case if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
     </EntitySwitch.Case>
-
+    <EntitySwitch.Case if={isCloudbuildAvailable}>
+      <EntityCloudbuildContent />
+    </EntitySwitch.Case>
     <EntitySwitch.Case>
       <EmptyState
         title="No CI/CD available for this entity"

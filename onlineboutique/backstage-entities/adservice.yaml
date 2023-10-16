@@ -13,6 +13,8 @@ metadata:
       icon: help
   annotations:
     'backstage.io/kubernetes-id': adservice
+    'google.com/cloudbuild-project-slug': mokeefe-test-6
+
 spec:
   type: service
   lifecycle: experimental
